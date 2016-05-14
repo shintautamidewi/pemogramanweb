@@ -1,34 +1,35 @@
 
 <html>
-    <body style="background-color:peach;">
-           <table width="600px" border="1" align="center"> 
-               <th>data diri</th>
-               <th>keterangan</th>
-            <tr>
-                <td>Nim</td><td>14111202</td>
-            </tr> 
-            <tr>
-                <td> Nama lengkap </td><td>shinta</td>
-         </tr>
-         <tr>
-             <td>jenis kelamin</td><td>perempuan</td>
-         </tr>
-         <tr>
-             <td>alamat</td><td>cimahi</td>
-         </tr>
-         <tr>
-             <td>agama</td><td>islam</td>
-         </tr>
-         <tr>
-             <td>jurusan</td><td>tif weekend</td>
-         </tr>
-         <tr>
-             <td>photo</td><td><img src="xxx.jpg" height="120" widht="100"></td>
-         </tr>
-        </table>
-</html>
-
-
-
+    <head>
+        <script language="javascript">
+        var image1 = new Image();
+        image1.src="crrrrr.jpg";
+        var image2 = new Image();
+        image2.src="2.jpg";
+        var image3 = new Image();
+        image3.src="3.jpg";
+        
+        </script>    
+    </head>
+    <body>
+    <center>
+        <h2> Penggunaan Objek Image untuk Slide Show</h2>
+        <img src="crrrrr.jpg" name="slide" width="500" height="250">
+    </center>
+    <script>
+        var step=1;
+        function slideit()
+        {
+            if(!document.images)
+                return
+            document.images.slide.src=eval("image"+step+".src");
+            if(step<3)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",1000);
+        }
+        slideit();
+    </script>
     </body>
 </html>
